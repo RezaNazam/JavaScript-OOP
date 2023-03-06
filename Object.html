@@ -12,18 +12,24 @@
         function Person(){
             this.firstname = "";
             this.lastname = "";
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, my name is ${this.firstname}`)
+            }
         }
-        
+
         const eko = new Person();
         eko.firstname = "Eko";
         eko.lastname = "Khennedy";
-
+        eko.sayHello("joko");
+        
         const budi = new Person(); 
         budi.firstname = "Budi";
         budi.lastname = "Nugraha";
+        budi.sayHello("joko");
 
         console.log(eko);
         console.log(budi);
+        
         </script>
 </body>
 </html>
