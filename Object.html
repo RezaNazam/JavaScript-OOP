@@ -9,22 +9,18 @@
 <body>
     <script>
 
-        function Person(){
-            this.firstname = "";
-            this.lastname = "";
+        function Person(firstname, lastname){
+            this.firstname = firstname;
+            this.lastname = lastname;
             this.sayHello = function (name) {
                 console.info(`Hello ${name}, my name is ${this.firstname}`)
             }
         }
 
-        const eko = new Person();
-        eko.firstname = "Eko";
-        eko.lastname = "Khennedy";
+        const eko = new Person("Eko", "Kennedy");
         eko.sayHello("joko");
         
-        const budi = new Person(); 
-        budi.firstname = "Budi";
-        budi.lastname = "Nugraha";
+        const budi = new Person("Budi", "Nugraha"); 
         budi.sayHello("joko");
 
         console.log(eko);
