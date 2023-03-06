@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Instanceof</title>
+</head>
+<body>
+    <script>
+
+        class Employee{
+
+        }
+
+        class Manager{
+
+        }
+
+        // class Manager extends Employee{
+
+        // }
+
+        const budi = new Employee()
+        const eko = new Manager()
+
+        console.info(typeof budi); //salah. output nya menjadi Object
+        console.info(typeof eko); //salah. output nya menjadi Object
+
+        console.info(budi instanceof Employee); //true
+        console.info(budi instanceof Manager); //false
+
+        console.info(eko instanceof Employee); //false
+        console.info(eko instanceof Manager); //true
+        
+        // console.info(eko instanceof Employee); //true //disini menjadi true karena Manager adalah extends(turunan) dari Employee
+        // console.info(eko instanceof Manager); //true
+        
+        // command di class manager harus di tutup jika ingin menjalankan command di class manager extends
+        
+    </script>
+</body>
+</html>
